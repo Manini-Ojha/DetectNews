@@ -12,7 +12,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 # Load data
-news_df = pd.read_csv('train.csv')
+#news_df = pd.read_csv('train.csv')
+
+url = "https://drive.google.com/file/d/1hDdr8bMt3RCv2p_O7HvLKQpht-x7WkjC/view?usp=drive_link"
+news_df = pd.read_csv(url)
+
 news_df = news_df.fillna(' ')
 news_df['content'] = news_df['author'] + ' ' + news_df['title']
 X = news_df.drop('label', axis=1)
@@ -61,4 +65,5 @@ if input_text:
         st.write('The News is Fake')
     else:
         st.write('The News Is Real')
+
 
