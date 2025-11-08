@@ -3,6 +3,8 @@ import numpy as np
 import re
 import pandas as pd
 from nltk.corpus import stopwords
+import nltk
+nltk.download('stopwords')
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
@@ -59,3 +61,4 @@ if input_text:
         st.write('The News is Fake')
     else:
         st.write('The News Is Real')
+
