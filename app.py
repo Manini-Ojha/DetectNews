@@ -54,7 +54,7 @@ model.fit(X_train,Y_train)
 # website
 st.title('Hi, Welcome to :violet[Detect News] :wave:')
 st.subheader("Let's see if the news is real or fake")
-input_text = st.text_input('Enter news Article in the format <Author Name><Title of Article> ')
+input_text = st.text_input('Enter news article in the format: <Author Name> <Title of Article> ')
 
 def prediction(input_text):
     input_data = vector.transform([input_text])
@@ -67,6 +67,7 @@ if input_text:
         st.write('The News is Fake')
     else:
         st.write('The News Is Real')
+
 
 
 
